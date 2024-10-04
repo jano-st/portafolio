@@ -1,0 +1,146 @@
+body {
+  background-color: #010101;
+}
+
+p {
+  color: rgba(248, 249, 250, 0.6);
+}
+
+section {
+  min-height: 75vh;
+}
+
+main {
+  margin-top: 60px;
+}
+
+#contenedor-perfil {
+  height: 600px;
+  width: fit-content;
+  position: relative;
+}
+
+#contenedor-perfil::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: 1px -1px 44px 65px rgba(1, 1, 1, 1) inset;
+  -webkit-box-shadow: 1px -1px 44px 65px rgba(1, 1, 1, 1) inset;
+  -moz-box-shadow: 1px -1px 44px 65px rgba(1, 1, 1, 1) inset;
+}
+
+#contenedor-perfil img {
+  height: 100%;
+}
+
+#proyectos {
+  min-height: 700px;
+}
+
+#habilidades,
+#proyectos {
+  padding-top: 80px;
+}
+
+.card-img-top {
+  height: 230px;
+  object-fit: cover;
+  filter: brightness(30%);
+  transition: filter 0.5s ease;
+}
+
+.card-img-top:hover {
+  filter: brightness(100%);
+}
+
+.card-text {
+  min-height: 60px;
+}
+
+#habilidades .col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 270px;
+}
+
+#habilidades svg {
+  fill: rgb(177, 177, 177);
+  width: 60%;
+  height: fit-content;
+  transition: all 0.5s ease;
+}
+
+#habilidades svg:hover {
+  fill: rgb(221, 221, 221);
+  width: 65%;
+}
+
+#contenedor-form-contacto {
+  display: flex;
+  justify-content: center;
+}
+
+#contenedor-form-contacto form {
+  width: 50%;
+}
+
+#contenedor-form-contacto input,
+#contenedor-form-contacto textarea {
+  background-color: rgb(230, 230, 230);
+}
+
+#contenedor-form-contacto button {
+  width: 100%;
+}
+
+footer svg {
+  fill: rgb(177, 177, 177);
+}
+
+.card a {
+  width: 35%;
+}
+
+.custom-tooltip {
+  --bs-tooltip-bg: rgb(61, 61, 61);
+  --bs-tooltip-color: var(--bs-white);
+}
+
+@media (width<992px) {
+  section {
+    min-height: 60vh;
+  }
+
+  #contenedor-perfil {
+    height: auto;
+    width: 50%;
+  }
+
+  #contenedor-perfil img {
+    height: auto;
+    width: 100%;
+  }
+
+  #proyectos .row {
+    padding: 0 10%;
+  }
+
+  #habilidades .col {
+    height: 220px;
+  }
+
+  #contenedor-form-contacto form {
+    width: 80%;
+  }
+
+  main {
+    margin-top: 75px;
+  }
+}
+
+@media (768px <=width < 992px) {
+  #habilidades .col {
+    height: 310px;
+  }
+}
